@@ -1,0 +1,550 @@
+*{
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+}
+
+/* lato-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/lato-v23-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/lato-v23-latin-700.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-700.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/lato-v23-latin-900.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v23-latin-900.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+
+body {
+    font-family: 'Lato';
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.2;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* header styles */
+.header {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    transition: .2s all linear;
+    padding-bottom: 20px;
+    z-index: 10;
+}
+.wrapper {
+     max-width: 1060px;
+     margin: 0 auto;
+}
+
+.wrapperfull {
+    max-width: 1262px;
+    margin: 0 auto;
+}
+
+.sectiontitle {
+    font-weight: 500;
+    font-size: 35px;        
+    line-height: 42px;
+    color: #102746;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sectiontitle::after {
+    content: "";
+    display: block;
+    max-width: 253px;
+    height: 3px;
+    background-color: #006DFE;
+}
+
+.headerwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 56px;
+}
+
+.headerlist {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 82px;
+}
+
+.headerlink {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none; 
+}
+
+.headerlink:hover, .headerlink:focus, .headerlink:active{
+    opacity: .75;
+}
+
+.header_active {
+    background: rgba(14, 29, 40, 1);
+}
+/* header styles end */
+
+/* main styles */
+.intro {
+    min-height: 100vh;
+    background: url("./images/bg-intro.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 263px;
+}
+
+.introtitle {
+    font-weight: 500;
+    font-size: 50px;
+    color: #FFFFFF;
+    max-width: 619px;
+    margin-bottom: 22px;
+}
+
+.introsubtitle {
+    font-weight: 400;
+    font-size: 1em;
+    color: #FFFFFF;
+    max-width: 546px;
+    line-height: 24px;
+    margin-bottom: 59px;
+}
+
+.searchformwrap {
+    border: none;
+}
+
+.searchInput {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-bottom: 262px;
+
+}
+
+.searchfield {
+    flex-basis: 297px;
+    background: transparent url("./images/svg/Oval.svg") no-repeat left 8px;
+    background-size: 15px;
+    border: none;
+    padding-bottom: 22px;
+    border-bottom: 2px solid #BFC0C5;
+    padding-left: 43px;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.searchfield::placeholder {
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.searchfield:focus {
+    outline: none;
+}
+
+.searchButton {
+    padding: 14px 39px;
+    text-transform: uppercase;
+    background: #1B7DFF;
+    font-weight: 500;
+    font-size: 24px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.searchButton:hover, .searchButton:focus, .searchButton:active {
+    background-color: #1d3a60;
+}
+
+/* Benefits Styles */
+.benefitswrap {
+    max-width: 1262px;
+    background-color: #fff;
+    margin: 0 auto;
+    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    position: relative;
+}
+
+.titlebenefit {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 42px;
+    color: #102746;
+    padding: 93px 99px 88px 99px;
+    position: absolute;
+    top: 0; left: 0;
+    transform: translateY(-100%);
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.benefitscard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 55px;
+    padding: 0 100px;
+    margin-bottom: 112px;
+}
+
+.itembenefit {
+    grid-column: span 1;
+    margin-bottom: 112px;
+}
+
+.iconbenefit {
+    margin-bottom: 37px;
+}
+
+.benefitssamp {
+    display: block;
+}
+
+.benefitscardtitle {
+    font-weight: 500;  
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 26px;
+}
+
+.benefitscardinfo {
+    font-weight: 400;
+    font-size: 16px;
+    color: #000000;
+    max-width: 317px;
+    margin-bottom: 37px;
+}
+
+.benefitslink {
+    font-size: 16px;
+    display: inline-block;
+    padding-right: 59px;
+    line-height: 24px;
+    color: #006DFE;
+    text-decoration: none;
+    background: url("./images/svg/arrowLink.svg") no-repeat 95% center;
+    transition: .2s all;
+}
+
+.benefitslink:hover, .benefitslink:focus {
+    background: url("./images/svg/arrowLink.svg")no-repeat right center;
+}
+
+.benefits {
+    margin-bottom: 131px;
+}
+
+.placeshead {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.placestitle {
+    margin-right: 15px;
+}
+
+.placesLink {
+    font-weight: 400;
+    font-size: 16px;
+    color: #006DFE;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: url("./images/svg/arrowLink.svg") no-repeat right center;
+    padding-right: 59px;   
+}
+
+.placesLink:hover {
+    opacity: .8;
+}
+
+.placescards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+}
+
+.top {
+    grid-column: span 3;
+    height: 354px;
+    object-fit: cover;
+}
+
+.placescardpic {
+    width: 100%;
+    transition: .2s all;
+}
+
+.placescard {
+    position: relative;
+    overflow: hidden;
+}
+
+.placescard:hover  .placescardpic {
+    transform: scale(1.05);
+}
+
+.placescard::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 36, 0.4);
+    position: absolute;
+    top: 0; left: 0;
+    z-index: 2;
+}
+
+.placescarditem {
+    position: absolute;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    bottom: 27px; left: 29px;
+    z-index: 3;
+}
+
+.bottom {
+    grid-column: span 2;
+    height: 283px;
+    object-fit: cover;
+}
+
+.places {
+    margin-bottom: 157px;
+}
+
+.tours {
+    margin-bottom: 152px;
+}
+
+.tours_tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 108px; 
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 77px;
+}
+
+.tourtitle {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 40px;
+    color: #102746;
+    margin-bottom: 85px;
+}
+
+.tourdesc {
+    font-size: 16px;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 58px;
+}
+
+.tourmore {
+    font-weight: 400;
+    font-size: 16px;
+    color: #006DFE;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: url("./images/svg/arrowLink.svg") no-repeat right center;
+    padding-right: 59px;  
+}
+
+.tourmore:hover {
+    opacity: .8;
+}
+
+.tour2pic {
+    grid-column:2/3;
+}
+
+.tour2info {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+
+.tour2info h3 {
+    max-width: 350px;
+}
+
+.topPlaces{
+    margin-bottom: 86px;
+}
+
+.toptitle {
+    margin-bottom: 64px;
+}
+
+.topcardpic {
+    position: relative;
+    margin-bottom: 45px;
+}
+
+.picstats {
+    position: absolute;
+    bottom: 2px; left: 0;
+    background: rgba(21, 24, 36, 0.6);
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 16px 25px;
+    justify-content: space-between;
+}
+
+.topcards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 57px;
+}
+.topcardtitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.commentsvalue {
+    background: url("./images/svg/cooment.svg") no-repeat right bottom;
+    padding-right: 20px;
+
+}
+
+.likesvalue {
+    background: url("./images/svg/heart.svg") no-repeat right bottom;   
+    padding-right: 20px;
+    margin-right: 14px;
+
+}
+
+.picdesc {
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 24px;
+    color: #102746;
+    margin-bottom: 31px;
+}
+
+.aboutPic {
+    text-transform: uppercase;
+    padding: 12px 19px;
+    background: #006DFE;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.aboutPic:hover, .aboutPic:focus {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.toppiclink {
+    position: absolute;
+    display: block;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
+.video {
+    width: 100%;
+}
+
+.videowrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.videoitem {
+    padding-top: 56.25%;
+}
+
+.videoelement {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: 0;
+}
+
+.footer {
+    background: rgba(14, 29, 40, 1);
+    padding: 119px 0;
+}
+
+.footermenu {
+    list-style: none;
+}
+
+.footer_item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.logoitem {
+    flex-basis: 50%;
+    flex: 1;
+}
+
+.menuitem {
+    flex-basis: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footertitle {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.footerlink {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footermenuitem {
+    margin-bottom: 3px;
+}
+
+.footerlink:hover, .footerlink:focus {
+    opacity: .7;
+}
